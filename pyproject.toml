@@ -40,13 +40,16 @@ kedro-docker = "^0.3.0"
 google-cloud-aiplatform = "^1.20.0"
 pytorch-lightning = "^2.0.1"
 numba = "^0.56.4"
-torch = { version = "^2.0.0", source="torch"}
-torchvision = { version = "^0.15.1", source="torch"}
+torch = "^2.0.0"
+torchvision = "^0.15.1"
 
-[[tool.poetry.source]]
-name = "torch"
-url = "https://download.pytorch.org/whl/cu117"
-secondary = true
+# Uncomment for GPU support (CUDA needs to be installed). Also, comment standard torch and torchvision versions above
+# torch = { version = "^2.0.0", source="torch"}
+# torchvision = { version = "^0.15.1", source="torch"}
+# [[tool.poetry.source]]
+# name = "torch"
+# url = "https://download.pytorch.org/whl/cu117"
+# secondary = true
 
 [tool.poetry.dev-dependencies]
 black = "^22.12"
